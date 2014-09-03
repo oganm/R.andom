@@ -3,9 +3,9 @@
 # requires lame and flac installed and added at your path
 # end input names with "/"
 # as you can see it's clearly for windows. 
-daFolder = "E:/Müzik/Interpol - Discography (2000-2012) [FLAC]/"
-out = "E:/Müzik/Interpol - Discography (2000-2012) [MP3]/"
-temp = "E:/Müzik/Interpol - Discography (2000-2012) [WAV]/"
+daFolder = "[FLAC]/"
+out = "[MP3]/"
+temp = "[WAV]/"
 
 fileList = list.files(daFolder,recursive=T)
 
@@ -46,4 +46,3 @@ for (i in fileList){
 }
 
 
-lame -b128 sample.wav  sample.mp3
