@@ -52,11 +52,21 @@ xcomFacebook = function(faceDump, outFile){
                   paste0('m_arr',headers[i],'MFirstNames=" "'),
                   paste0('m_arr',headers[i],'FFirstNames=" "'))
         for (j in 1:countryAssign[i]){
-            lines = c(lines,
-                      paste0('m_arr',headers[i],'LastNames="',face$Name[randomOrder[j]],'"'))
+            if (names(headers)[i]!='Russia'){
+                lines = c(lines,
+                          paste0('m_arr',headers[i],'LastNames="',face$Name[randomOrder[j]],'"'))
+            } else {
+                # Russia names are special because of gendered surnames. this will forever
+                # doom your "russian" friends to a single gender.
+                lines = c(lines,
+                          paste0('m_arr',headers[i],sample(c('M','F'),1),'LastNames="',face$Name[randomOrder[j]],'"'))
+            }
         }
         randomOrder = randomOrder[-(1:countryAssign[i])]
+        
+        
     }
-   writeLines(lines,outFile)
+    writeLines(lines,outFile)
+    
 }
 
