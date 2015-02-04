@@ -1,5 +1,5 @@
 options("error" = function(){
-    a=floor(runif(1,1,14))
+    a=floor(runif(1,1,16))
     switch(a,
            {print('You failed again')},
            {print('When will you learn?')},
@@ -13,6 +13,8 @@ options("error" = function(){
            {print("Go back to BASIC")},
            {print("What were you thinking!")},
            {print("This is bullshit!")},
-           {print("I hope you are not getting paid for this")})
+           {print("I hope you are not getting paid for this")}),
+           {print("Please don't have kids")},
+           {print("You don't deserve me")})
     .rs.recordTraceback(TRUE)
 })
