@@ -13,7 +13,7 @@ options("error" = function(){
            {print("Go back to BASIC")},
            {print("What were you thinking!")},
            {print("This is bullshit!")},
-           {print("I hope you are not getting paid for this")}),
+           {print("I hope you are not getting paid for this")},
            {print("Please don't have kids")},
            {print("You don't deserve me")})
     .rs.recordTraceback(TRUE)
