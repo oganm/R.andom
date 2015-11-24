@@ -16,7 +16,7 @@ options("error" = function(){
            {cat("I hope you are not getting paid for this")},
            {cat("Please don't have kids")},
            {cat("You don't deserve me")},
-           {cat("Your powers are weak!")}),
+           {cat("Your powers are weak!")},
            {cat("NOOOOOOOOOO!")})
     .rs.recordTraceback(TRUE)
 })
