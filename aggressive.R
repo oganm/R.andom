@@ -1,20 +1,22 @@
 options("error" = function(){
-    a=floor(runif(1,1,16))
+    a=floor(runif(1,1,18))
     switch(a,
-           {print('You failed again')},
-           {print('When will you learn?')},
-           {print('Your code is bad and you should feel bad')},
-           {print('Incompetence at the highest echelons of power!')},
-           {print("Just give up")},
-           {print("Don't quit your day job")},
-           {print("Why are you even trying?")},
-           {print("It's not R. It's you")},
-           {print("You fucked it up")},
-           {print("Go back to BASIC")},
-           {print("What were you thinking!")},
-           {print("This is bullshit!")},
-           {print("I hope you are not getting paid for this")},
-           {print("Please don't have kids")},
-           {print("You don't deserve me")})
+           {cat('You failed again')},
+           {cat('When will you learn?')},
+           {cat('Your code is bad and you should feel bad')},
+           {cat('Incompetence at the highest echelons of power!')},
+           {cat("Just give up")},
+           {cat("Don't quit your day job")},
+           {cat("Why are you even trying?")},
+           {cat("It's not R. It's you")},
+           {cat("You fucked it up")},
+           {cat("Go back to BASIC")},
+           {cat("What were you thinking!")},
+           {cat("This is bullshit!")},
+           {cat("I hope you are not getting paid for this")},
+           {cat("Please don't have kids")},
+           {cat("You don't deserve me")},
+           {cat("Your powers are weak!"}),
+           {cat("NOOOOOOOOOO!")})
     .rs.recordTraceback(TRUE)
 })
