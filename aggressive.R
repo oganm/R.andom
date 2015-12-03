@@ -1,5 +1,5 @@
 options("error" = function(){
-    a=floor(runif(1,1,18))
+    a=floor(runif(1,1,20))
     switch(a,
            {cat('You failed again')},
            {cat('When will you learn?')},
@@ -17,6 +17,8 @@ options("error" = function(){
            {cat("Please don't have kids")},
            {cat("You don't deserve me")},
            {cat("Your powers are weak!")},
-           {cat("NOOOOOOOOOO!")})
+           {cat("NOOOOOOOOOO!")},
+           {cat("You aren't important enough for a specific insult!")},
+           {cat("I bet your brain feels as good as new, seeing that you never use it.")})
     .rs.recordTraceback(TRUE)
 })
