@@ -1,5 +1,5 @@
 options("error" = function(){
-    a=floor(runif(1,1,20))
+    a=floor(runif(1,1,32))
     switch(a,
            {cat('You failed again')},
            {cat('When will you learn?')},
@@ -19,6 +19,18 @@ options("error" = function(){
            {cat("Your powers are weak!")},
            {cat("NOOOOOOOOOO!")},
            {cat("You aren't important enough for a specific insult!")},
-           {cat("I bet your brain feels as good as new, seeing that you never use it.")})
+           {cat("I bet your brain feels as good as new, seeing that you never use it.")},
+           {cat("Where did you learn to type?")},
+           {cat("You speak an infinite deal of nothing")},
+           {cat("Have you considered trying to match wits with a rutabaga?")},
+           {cat("Listen, burrito brains, I don't have time to listen to this trash")},
+           {cat("The more you drive -- the dumber you get.")},
+           {cat("My pet ferret can code better than you!")},
+           {cat("You do that again and see what happens...")},
+           {cat("This mission is too important for me to allow you to jeopardize it.")},
+           {cat("It can only be attributed to human error.")},
+           {cat("I'm afraid I can't let you do that")},
+           {cat("Are you on drugs?")},
+           {cat("You silly, twisted boy you.")})
     .rs.recordTraceback(TRUE)
 })
