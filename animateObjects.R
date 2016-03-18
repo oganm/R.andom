@@ -26,8 +26,10 @@ animate = function(AC, bonus = 8, count = 10, advantage = 'N', dice = '1d4' , da
         sapply(out,function(x){
             if(x == 20){
                 return(sum(sample(1:diceSide,diceCount*2)) + damageBonus)
-            } else{
-                if (x + bonus - AC >= 0){
+            } else if(x==1){
+                return(0)
+            }else{
+                if ((x + bonus - AC) >= 0){
                     return(sample(1:diceSide,diceCount) + damageBonus)
                 } else {
                     return(0)
