@@ -1,9 +1,12 @@
-animate = function(AC, bonus = 8, count = 10, advantage = F, dice = 4 , damageBonus = 4){
+animate = function(AC, bonus = 8, count = 10, advantage = 'N', dice = 4 , damageBonus = 4){
     out = sapply(1:count, function(x){
         out = sample(1:20,size = 1)
-        if (advantage == T){
+        if (advantage == 'A'){
             out2 = sample(1:20,size = 1)
             out = max(out,out2)
+        } else if(advantage == 'D'){
+            out2 = sample(1:20,size = 1)
+            out = min(out,out2)
         }
         return(out)
     })
